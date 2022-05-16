@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link rel="stylesheet"type="text/css"href="GroupStyle.css"/>
+    <title>Survey completed!</title>
+</head>
+<body>
+    <nav>
+    <div class="navhead">
+        <h4>Group CA</h4>
+    </div>
+    <ul class="nav-link">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="mobile_design.html">Mobile Design</a></li>
+        <li><a href="usasability.html">Usability</a></li>
+        <li><a href="form.html">Survey</a></li>
+    </ul>
+    </nav>
+    <div id="container">
+        <section>
+            <div id="homecard">
+                <h1 class="centeredHeading">Thank you for completing the survey!</h1>
+                <p id="userChoice"></p>
+                <script>
+                    var url = new URL(window.location.href);
+                    var choice = url.searchParams.get("choice");
+                    var p = document.getElementById("userChoice");
+                    switch(choice){
+                        case "colour":
+                            p.innerHTML = "Your choice is: Colour scheme"
+                            break;
+                        case "navigation":
+                            p.innerHTML = "Your choice is: Easy navigation"
+                            break;
+                        case "layout": 
+                            p.innerHTML = "Your choice is: Content layout"
+                            break;
+                        case "font":
+                            p.innerHTML = "Your choice is: Font choice"
+                            break;
+                    }
+                </script>
+                <a href="home.html">Return to the Home Page</a>
+            </div>
+        </section>
+    </div>
+</body>
+<footer>
+    <h4>Michal Kos-Sliwinski - Student Number: X00179021</h4>
+</footer>
+</body>
+</html>
